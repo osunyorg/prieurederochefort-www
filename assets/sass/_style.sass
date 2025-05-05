@@ -1,3 +1,12 @@
+.hero
+    h1
+        color: $color-accent
+    @include media-breakpoint-up(desktop)
+        .content
+            align-items: end !important
+            text-align: end
+            h1
+                margin-bottom: pxToRem(-6)
 footer#document-footer
     .footer-site
         display: none
