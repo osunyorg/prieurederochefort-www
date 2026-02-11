@@ -4,13 +4,27 @@
     h1
         color: $color-accent
 .page__home
-    .hero
-        @include media-breakpoint-up(desktop)
+    @include media-breakpoint-up(desktop)
+        #document-header
+            position: absolute
+        .hero
+            padding-top: 0
             .content
                 align-items: end !important
+                padding-top: 0
                 text-align: end
-                h1
-                    margin-bottom: pxToRem(-6)
+                .hero-text
+                    width: columns(6)
+                    h1
+                        margin-bottom: pxToRem(-6)
+                figure
+                    width: calc(var(--column-width) * 6 + var(--grid-gutter) * 6)
+                    margin-right: var(--grid-gutter-negative)
+        .block-chapter
+            .chapter
+                justify-content: end !important
+                .text
+                    width: columns(6) !important
 footer#document-footer
     .footer-site
         display: none
